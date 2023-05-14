@@ -1,21 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-const Nav = () => {
+const Navbar = () => {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className=" h-[12vh] flex justify-center items-center pt-10">
+      <Link
+        href="/"
+        className="m-4 transition duration-500 hover:underline underline-offset-4"
+      >
+        Home
+      </Link>
+      <Link
+        href="/search"
+        className="m-4 transition duration-500 hover:underline underline-offset-4"
+      >
+        Search
+      </Link>
     </div>
   );
 };
 
-export default Nav;
+export default Navbar;

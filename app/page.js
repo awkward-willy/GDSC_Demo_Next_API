@@ -1,15 +1,14 @@
 // Import your Client Component
 import HomePage from "./Homepage";
 
-const auth = "";
+const auth = process.env.KEY;
 
 export async function getPosts() {
   const dataFetch = await fetch(
-    "https://api.pexels.com/v1/curated?page=1&per_page=30",
+    "https://api.pexels.com/v1/curated?page=1&per_page=15",
     {
       next: { revalidate: 60 },
       headers: {
-        Accept: "application/json",
         Authorization: auth,
       },
     }

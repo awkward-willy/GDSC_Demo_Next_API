@@ -1,7 +1,9 @@
-import React from "react";
-
 const Footer = () => {
-  return <footer className="footer">WillyAwkward 2023©</footer>;
+  return (
+    <footer className="">
+      Pictures from <a href="https://www.pexels.com/">Pexels</a>
+    </footer>
+  );
 };
 
 export default Footer;

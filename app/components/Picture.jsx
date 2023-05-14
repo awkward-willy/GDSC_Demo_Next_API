@@ -1,15 +1,21 @@
-import React from "react";
+import Image from "next/image";
 
 const Picture = ({ data }) => {
   return (
-    <div className="picture">
+    <div className="">
       <p>{data.photographer}</p>
-      <div className="imageContainer">
-        <img src={data.src.large} alt="" />
+      <div className="w-[30vw]">
+        <Image
+          src={data.src.portrait}
+          alt={data.url}
+          height={data.height}
+          width={data.width}
+          priority={true}
+        />
       </div>
       <p>
         Download Image:{" "}
-        <a target="_blank" href={data.src.large}>
+        <a target="_blank" href={data.src.portrait}>
           Click Here
         </a>
       </p>

@@ -6,10 +6,10 @@ const SearchBar = ({ search, setInput }) => {
   };
 
   return (
-    <div className="search">
+    <>
       <input onChange={inputHandler} type="text" />
       <button onClick={search}>Search</button>
-    </div>
+    </>
   );
 };
 
