@@ -2,23 +2,22 @@ import Image from "next/image";
 
 const Picture = ({ data }) => {
   return (
-    <div className="">
-      <p>{data.photographer}</p>
-      <div className="w-[30vw]">
-        <Image
+    <div className="m-2">
+      
+      <Image
           src={data.src.portrait}
           alt={data.url}
           height={data.height}
           width={data.width}
           priority={true}
-        />
-      </div>
-      <p>
-        Download Image:{" "}
+          className="w-[15vw] object-cover m-4 max-w-md"
+      />
+      <div className="px-4 text-center">
+        <p>{data.photographer}</p>
         <a target="_blank" href={data.src.portrait}>
-          Click Here
+          Open in new tab.
         </a>
-      </p>
+      </div>
     </div>
   );
 };
