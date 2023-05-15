@@ -41,28 +41,33 @@ const Searchpage = () => {
   return (
     <>
       <Navbar />
+      <h1 className="text-center text-4xl my-4">Search From Pexels Image Galary</h1>
       <SearchBar
         search={() => {
           setCurrentSearch(input);
         }}
         setInput={setInput}
+        className=""
       />
-      <div className="pictures">
+      <div className="flex flex-wrap justify-center">
         {data &&
           data.map((d, index) => {
-            return <Picture key={index} data={d} />;
+            return <Picture key={index} data={d} className="w-[15vw] object-cover m-4 max-w-md"/>;
           })}
       </div>
-
-      <button
-        onClick={async () => {
-          setPage(page + 1);
-          let res = await morePicture(data, currentSearch, input, page);
-          setData(res);
-        }}
-      >
-        Load more
-      </button>
+      <div className="text-center m-2">
+        <button
+          onClick={async () => {
+            setPage(page + 1);
+            let res = await morePicture(data, currentSearch, input, page);
+            setData(res);
+          }}
+          className="p-2 border-2 rounded-md hover:bg-black hover:text-white"
+        >
+          <span>Load more</span>
+        </button>
+      </div>
+      
       <Footer />
     </>
   );

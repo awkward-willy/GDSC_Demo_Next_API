@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className=" h-[12vh] flex justify-center items-center pt-10">
+    <div className="h-[12vh] flex justify-center items-center bg-gray-300">
       <Link
         href="/"
         className="m-4 transition duration-500 hover:underline underline-offset-4"
